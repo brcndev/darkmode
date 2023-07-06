@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --switch-bg-url: url(./img/sun.svg)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.darkmode {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    --switch-bg-url: url(./img/moon-stars.svg);
+    border: 1px solid;
+    
+}
+#btn {
+    margin-top: 15px;
+    position: relative;
+}
+
+#btn button {
+    width: 32px;
+    height: 32px;
+    background:white var(--switch-bg-url) no-repeat center ;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    
+}
+
+.darkmode #btn button {
+    left: initial;
+    right: 0;
+}
+
+#btn span {
+    display: block;
+    border: 1px solid;
+    height: 24px;
+    width: 64px;
+    border-radius: 999px; 
+    
+}
+
+.darkmode #btn span {
+    border: 1px solid white;
+}
+
